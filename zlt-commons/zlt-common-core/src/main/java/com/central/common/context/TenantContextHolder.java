@@ -12,6 +12,7 @@ public class TenantContextHolder {
     /**
      * 支持父子线程之间的数据传递
      */
+    //FIXME 线程通信
     private static final ThreadLocal<String> CONTEXT = new TransmittableThreadLocal<>();
 
     public static void setTenant(String tenant) {

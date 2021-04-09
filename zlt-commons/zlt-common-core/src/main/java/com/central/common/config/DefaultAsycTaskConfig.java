@@ -50,6 +50,7 @@ public class DefaultAsycTaskConfig {
         /*
            rejection-policy：当pool已经达到max size的时候，如何处理新任务
            CALLER_RUNS：不在新线程中执行任务，而是有调用者所在的线程来执行
+           线程饱和策略有四种，默认的是放弃Abort
         */
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         executor.initialize();

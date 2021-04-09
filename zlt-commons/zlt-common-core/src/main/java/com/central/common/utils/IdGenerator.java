@@ -20,4 +20,9 @@ public class IdGenerator {
     public static String getIdStr() {
         return String.valueOf(WORKER.nextId());
     }
+
+    public static void main(String[] args) {
+        Sequence WORKER = new Sequence();
+        System.out.println(WORKER.nextId());
+    }
 }

@@ -33,6 +33,7 @@ public class LoginAppUser extends SysUser implements SocialUserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<GrantedAuthority> collection = new HashSet<>();
         if (!CollectionUtils.isEmpty(super.getRoles())) {
+            //FIXME parallelStream带来的线程安全问题
             super.getRoles().parallelStream().forEach(role -> collection.add(new SimpleGrantedAuthority(role.getCode())));
         }
         return collection;

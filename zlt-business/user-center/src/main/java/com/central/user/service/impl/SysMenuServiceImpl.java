@@ -37,6 +37,7 @@ public class SysMenuServiceImpl extends SuperServiceImpl<SysMenuMapper, SysMenu>
 		if (!CollectionUtils.isEmpty(menuIds)) {
 			List<SysRoleMenu> roleMenus = new ArrayList<>(menuIds.size());
 			menuIds.forEach(menuId -> roleMenus.add(new SysRoleMenu(roleId, menuId)));
+//			FIXME 什么时候更新角色权限缓存呢
 			roleMenuService.saveBatch(roleMenus);
 		}
 	}

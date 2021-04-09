@@ -80,6 +80,7 @@ public class LockAspect {
     /**
      * 解析spEL表达式
      */
+    //FIXME SpEL表达式的解析
     private String getValBySpEL(String spEL, MethodSignature methodSignature, Object[] args) {
         //获取方法形参名数组
         String[] paramNames = nameDiscoverer.getParameterNames(methodSignature.getMethod());
