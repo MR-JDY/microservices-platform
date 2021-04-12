@@ -457,6 +457,7 @@
         <module>zlt-config</module>
         <!-- demo -->
         <module>zlt-demo</module>
+        <module>zlt-demo/test-code</module>
     </modules>
 
     <licenses>
